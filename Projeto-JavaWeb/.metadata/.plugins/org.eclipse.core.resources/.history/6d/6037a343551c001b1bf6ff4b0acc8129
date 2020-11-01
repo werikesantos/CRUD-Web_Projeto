@@ -1,0 +1,292 @@
+/* FORMATAÇÃO / RESET */
+p{
+  text-align: justify;
+  text-indent: 50px;
+}
+
+a{
+  color: #606060;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background-color: #dddddd;
+  color: rgba(0, 0, 0, 1);
+}
+/* ESCONDENDO O PLAY DE AUDIO NA PAGINA DA WEB
+audio#page{
+  opacity: 0;
+}
+*/
+/*============================================================================*/
+video#recente{
+  position: relative;
+  left: 0px;
+  top:-05px;
+  width: 443px;
+
+}
+
+video#como-funciona{
+  position: relative;
+  left: 2px;
+  top: 05px;
+  width: 740px;
+  height: 420px;
+  margin-bottom: 50px;
+}
+
+
+/*============================================================================*/
+
+/* FORMATAÇÃO DA DIVISÓRIA */
+div#interface{
+  width: 1230px;
+  background-color: #ffffff;
+  margin: -20px auto 0px auto;
+  box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+  padding: 10px;
+}
+/*============================================================================*/
+
+/* FORMATAÇÃO DO CABEÇALHO! */
+
+header#cabecalho img#icone{
+  position: absolute;
+  left: 1120px;
+  top: 70px;
+}
+
+header#cabecalho{
+  border-bottom: 1px #606060 solid;
+  height: 150px;
+  background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+}
+
+header#cabecalho h1{
+  font-family: sans-serif;
+  font-size: 30pt;
+  color: #606060;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+header#cabecalho h2{
+  font-family: sans-serif;
+  color: #808080;
+  font-size: 15pt;
+  padding: 0px;
+  margin-top: 0px;
+}
+
+/*------------------------FORMATAÇÃO_CABEÇALHO-MENU---------------------------*/
+
+nav#menu {
+  display: block;/*SERVE PARA MOVIMENTAR O CONTEUDO DO 'nav'*/
+}
+
+nav#menu h1{
+  display: none;
+}
+
+nav#menu ul{
+  list-style: none;
+  text-transform: uppercase;
+  position: absolute; /* SERVE PARA PASSAR POR CIMA DOS DOCUMENTOS*/
+  top: -20px;
+  left: 650px;
+}
+
+nav#menu li{
+  display: inline-block;
+  background-color: #dddddd;
+  padding: 10px;
+  margin: 2px;
+  transition: background-color 1s;
+}
+
+nav#menu li:hover{
+  background-color: #606060;
+}
+
+nav#menu a{
+  text-decoration: none;
+  color: black;
+}
+
+nav#menu a:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+/*============================================================================*/
+
+/* FORMATAÇÃO DO CORPO */
+section#corpo{
+  display: block;
+  width: 740px;
+  background-color: white;
+  float: left;
+  border-right: 1px solid #606060;
+  padding-right: 15px;
+}
+
+/*-------------------------FORMATAÇÃO_CORPO-ARTIGO----------------------------*/
+article#noticia-principal h2{
+  background-color: #dddddd;
+  font-size: 12pt;
+  color: #606060;
+  padding: 5px 0px 5px 10px;
+  margin: 10px 0px 10px 0px;
+}
+
+
+/*-------------------------FORMATAÇÃO_CORPO-CABEÇALHO_ARTIGO------------------*/
+article header#cabecalho-artigo h1{
+  font-family: 'FonteLogo', sans-serif;
+  font-size: 20pt;
+  color: #606060;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+article header#cabecalho-artigo h2{
+ font-size: 13pt;
+ color: #cecece;
+ background-color: #ffffff;
+ margin: 0px;
+}
+
+article header#cabecalho-artigo h3{
+  font-size: 12px;
+  color: #606060;
+
+}
+
+.direita{
+  text-align: right;
+}
+
+/*-------------------------FORMATAÇÃO_CORPO-TABELA----------------------------*/
+table#tabelaspec{
+  border: 1px solid #606060;
+  border-spacing: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table#tabelaspec tr{
+
+}
+
+table#tabelaspec td{
+  border: 1px solid #606060;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+table#tabelaspec td.ce{
+  color: white;
+  background-color: #606060;
+  vertical-align: top;
+  font-weight: bold;
+  text-align: right;
+}
+
+table#tabelaspec td.cd{
+  background-color: #cecece;
+}
+
+table#tabelaspec caption{
+  color: #808080;
+  font-size: 13pt;
+  font-weight: bold;
+}
+
+table#tabelaspec caption span{
+  display: block;
+  float: right;
+  color: #000000;
+  font-size: 8pt;
+  margin-top: 10px;
+}
+
+/*-------------------------FORMATAÇÃO_CORPO-IMAGEM----------------------------*/
+figure.foto-legenda {
+  position: relative;
+  border: 8px solid white;
+  box-shadow: 1px 1px 4px black;
+
+}
+
+figure.foto-legenda img{
+  width: 663px;
+  height: 400px;
+
+}
+
+figure.foto-legenda figcaption{
+  position: absolute;
+  top: 0px;
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  width: 100%;
+  height:100%;
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+figure.foto-legenda:hover figcaption{
+  opacity: 1;
+}
+/*============================================================================*/
+
+/* FORMATAÇÃO DA ÁREA LATERAL */
+aside#lateral{
+  display: block;
+  width: 444px;
+  background-color: white;
+  float: right;
+  background-color: #dddddd;
+  padding: 10px;
+  margin-top: 10px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+
+aside#lateral h1{
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #606060;
+  margin-top: 0px;
+}
+
+aside#lateral h2{
+  background-color: #606060;
+  font-size: 13pt;
+  color: #ffffff;
+  padding: 5px;
+
+}
+
+/*============================================================================*/
+
+/* FORMATAÇÃO DO RODAPÉ */
+footer#rodape{
+  display: block;
+  background-color: white;
+  clear: both;/*LIMPARA AS CONFIGURAÇÕES DOS DOIS LADOS*/
+  border-top: 1px solid #606060;
+}
+
+footer#rodape p{
+  text-align: center;
+}
+/*============================================================================*/
