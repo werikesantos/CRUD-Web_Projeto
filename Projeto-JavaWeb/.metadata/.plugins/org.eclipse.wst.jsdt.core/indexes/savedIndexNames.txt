@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\Users\werik\Documents\GitHub\CRUD-Web_Projeto\Projeto-JavaWeb\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+446609571.index
+3318131595.index
+3600136066.index
+2996224367.index
+1648176540.index
