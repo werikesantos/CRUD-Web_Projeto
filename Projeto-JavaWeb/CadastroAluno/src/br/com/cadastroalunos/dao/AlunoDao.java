@@ -42,7 +42,7 @@ public class AlunoDao {
 		try {
 			stmt = ConnectionFactory.getConnection().prepareStatement(update);
 			stmt.setString(1, aluno.getNome());
-			stmt.setDate(2, (Date) aluno.getDataNascimento()); 
+			stmt.setDate(2, AlunoUtil.convert(aluno.getDataNascimento())); 
 			stmt.setString(3, aluno.getEndereco());
 			stmt.setString(4, aluno.getEmail());
 			stmt.setString(5, aluno.getTelefone());
@@ -53,12 +53,12 @@ public class AlunoDao {
 		}
 	}
 	
-	public void delete(Aluno aluno) {
+	public void delete(String nome) {
 		String delete = "DELETE FROM aluno WHERE nome = ?";
 		
 		try {
 			stmt = ConnectionFactory.getConnection().prepareStatement(delete);
-			stmt.setString(1, aluno.getNome());
+			stmt.setString(1, nome);
 			stmt.execute();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -91,5 +91,34 @@ public class AlunoDao {
 			e.printStackTrace();
 		}
 		return listaAluno;
-	}	
+	}
+	
+	//BUSCAR POR NOME E E-MAIL
+	public Aluno nomeEmail(String nome, String email) {
+		
+		Aluno aluno = new Aluno();
+		
+		String select = "Select nome, dataNascimento, endereco, email, telefone FROM aluno WHERE nome = ? AND email = ?";
+		
+		try {
+			stmt = ConnectionFactory.getConnection().prepareStatement(select);
+			stmt.setString(1, nome);
+			stmt.setString(2, email);
+			resultSet = stmt.executeQuery();
+			
+			while(resultSet.next()) {
+						
+				aluno.setNome(resultSet.getString("nome"));
+				aluno.setDataNascimento(resultSet.getDate("dataNascimento")); 
+				aluno.setEndereco(resultSet.getString("endereco"));
+				aluno.setEmail(resultSet.getString("email"));
+				aluno.setTelefone(resultSet.getString("telefone"));
+				
+			}
+	
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return aluno;
+	}
 }

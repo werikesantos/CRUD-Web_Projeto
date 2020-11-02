@@ -43,7 +43,7 @@
 
       </section>
 
-      <form method="post" id="fCOntato" action="AlunoCreateServlet">
+      <form method="post" id="fCOntato" action="alunocreateservlet">
 
         <fieldset id="usuario">
           <legend>Preencha os campos abaixo</legend>
@@ -65,17 +65,24 @@
             </p>
 
             <p>
-              Data de Nascimento:<input id="cNasc" name="tNasc" type="date"/>
+              Data de Nascimento:<input id="cNasc" name="dataNascimento" type="date"/>
             </p>
 
         </fieldset>
-
-        <input id="" name="tEnviar" type="image" src="_imagens/botao-enviar.png"/>
+	
+		<!--<input id="" name="tEnviar" type="image" src="_imagens/botao-enviar.png"/> -->
+        <!--<input id="" name="tEnviar" type="image" src="_imagens/botao-enviar.png"/> -->
+        
+        <button><a href="editar.jsp" target="_blank">Editar</a></button> 
+        <button>Adicionar</button> 
+       	<button><a href="pesquisa.jsp" target="_blank">Pesquisar</a></button> 
+        
       </form>
 
     <footer id="rodape">
-
+ 	
+ 	
      <p>Copyright 2020 - by Werike Santos<br/>
-     <!-- <a href="http://werike.epizy.com/?i=1" target="_blank">Site</a> | --><a href="https://github.com/werikesantos" target="_blank">GitHub</a></p>
+     <!-- <a href="http://werike.epizy.com/?i=1" target="_blank">Site</a> | --><a href="https://github.com/werikesantos/CRUD-Web_Projeto" target="_blank">GitHub</a></p>
 
     </footer>
