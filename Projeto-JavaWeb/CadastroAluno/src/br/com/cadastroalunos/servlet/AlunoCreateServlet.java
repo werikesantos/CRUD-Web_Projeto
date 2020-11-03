@@ -16,6 +16,15 @@ import br.com.cadastroalunos.utils.AlunoUtil;
 @WebServlet(urlPatterns = "/alunocreateservlet")
 public class AlunoCreateServlet extends HttpServlet{
 	
+	public AlunoCreateServlet() {
+		super();
+	}
+	
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		//req = recebendo 

@@ -53,9 +53,12 @@
 
         <fieldset id="usuario">
           <legend>Editar Dados Pessoais</legend>
-		<%AlunoDao dao = new AlunoDao(); 
-			Aluno pesquisaAluno =  dao.nomeEmail(request.getParameter("nome"), request.getParameter("email"));%>
-			<%System.out.println(pesquisaAluno); %>
+		<%
+		AlunoDao dao = new AlunoDao(); 
+		Aluno pesquisaAluno =  dao.nomeEmail(request.getParameter("nome"), request.getParameter("email"));
+		%>
+		
+		<%System.out.println(pesquisaAluno); %>
             <p>
               <label for="cNome">Nome:</label> <input value=<%= pesquisaAluno.getNome() %> id="cNome" name="nome" type="text" size="20" maxlength="30" placeholder="Editar Nome"/>
             </p>
